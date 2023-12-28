@@ -116,7 +116,7 @@ bool nblk_start(gpio_num_t gpio, uint32_t pd_ms, uint32_t dr_ms, bool sl, uint8_
     }
   }
 
-  nblink_t nblk;
+  nblink_t nblk = {0};
   nblk.gpio = gpio;
   nblk.period_ms = pd_ms;
   nblk.remaining_ms = dr_ms;
@@ -361,7 +361,7 @@ bool nblk_sync_start(nblk_mgr_t* mgr, gpio_num_t gpio, uint32_t pd_ms, uint32_t 
     }
   }
 
-  nblink_t nblk;
+  nblink_t nblk = {0};
   nblk.gpio = gpio;
   nblk.period_ms = pd_ms;
   nblk.remaining_ms = dr_ms;
